@@ -7,27 +7,25 @@ M = 4; N = 8. -> 4, 6, 7, 8
 
 System.Console.Clear();
 
-System.Console.Clear();
-
-int SumDigits(int n,int m)
+int SumDigits(int n, int m)
 {
     int sum = 0;
     if (m > n)
     {
         System.Console.WriteLine();
-        return sum;   
+        return sum;
     }
     sum += m;
     System.Console.Write(sum + " ");
-    sum += SumDigits(n,m+1);
+    sum += SumDigits(n, m + 1);
     return sum;
 }
 
-System.Console.WriteLine("Введите число начала ");
+System.Console.WriteLine("Введите стартовое число");
 int m = int.Parse(Console.ReadLine()!);
 
 System.Console.WriteLine("Введите последнее число");
 int n = int.Parse(Console.ReadLine()!);
 
-System.Console.WriteLine($"числа от {m} до {n}"); 
-System.Console.WriteLine($"Сумма чисел => {SumDigits(n,m)}");
+System.Console.WriteLine($"числа от {m} до {n}");
+System.Console.WriteLine($"Сумма чисел => {SumDigits(n, m)}");
